@@ -1,0 +1,419 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"Kanit";
+}
+
+.title-main-page{
+    font-size:30vw;
+    white-space: normal; /* Permite quebra de linha */
+    word-break: break-word; /* Quebra se necessário */
+    position:absolute;
+    z-index:-1;
+    font-family:"Kanit";
+    text-transform:uppercase;
+    font-weight:bold;
+    color:rgba(238, 236, 236, 0.448);
+    line-height: 0.9; /* Ou até 0.8 se quiser mais colado */
+    /*width: 90vw;*/
+}
+.section1{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    position:relative;
+    top:8rem;
+    flex: 1;
+    padding: 20px;
+}
+
+body{
+    display:flex;
+}
+
+
+/* ========================================== */
+/* Barra Lateral - estrutura e expansão */
+/* ========================================== */
+.barra_lateral {
+    display: flex;
+    position: relative;
+    height: 120vh !important;
+    width: 60px;
+    background: url(IMGS/Estrutura/bars.png) center/cover no-repeat;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.barra_lateral:hover {
+    width: 200px;
+}
+
+/* ========================================== */
+/* Logo */
+/* ========================================== */
+.logo-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 40px;
+    padding-top: 50px;
+    transition: transform 0.3s ease;
+}
+
+.barra_lateral:hover .logo {
+    transform: scale(3.0);
+}
+
+/* ========================================== */
+/* Lista de Itens */
+/* ========================================== */
+.barra_lateral ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 250px;
+}
+
+.barra_lateral ul li {
+    list-style: none;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.barra_lateral ul li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    border-radius: 35px 0 0 35px;
+}
+
+/* Ícones */
+.barra_lateral ul li a .icon {
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.menu-icon {
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+/* Título dos itens */
+.barra_lateral ul li a .title {
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Efeitos de hover */
+.barra_lateral ul li:hover {
+    background: #ffffff;
+    border-radius: 30px 0 0 30px;
+}
+.barra_lateral ul li a:hover {
+    color: #00b156;
+}
+
+/* Ícones antigos desativados */
+.barra_lateral ul li a .icon i {
+    display: none;
+}
+
+/* Ícones fixados ao passar o mouse */
+.barra_lateral ul li.hover-lock {
+    background: #ffffff;
+    border-radius: 30px 0 0 30px;
+}
+
+.barra_lateral ul li.hover-lock a {
+    color: #00b156;
+}
+
+.barra_lateral ul li.hover-lock img.menu-icon {
+    content: attr(data-hover);
+}
+
+
+/*Aba cadastro de livros*/
+
+#div-cadastro{
+    height:34rem;
+    width:36rem;
+    gap:100px;
+}
+#cadastro-livros{
+    margin-left:1.3rem;
+}
+#div-infomacoes-cadastro{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.links-cadastro{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    position:relative;
+    top:-2.8rem;
+}
+
+/*Botões livros e individuos*/
+
+.link-redicionamento{
+    height:5rem;
+    width:13.5rem;
+    background: linear-gradient(
+        90deg,
+        #00c67f,
+        #3aff9a
+    );
+    border:none;
+    color:white;
+    border-radius:30px;
+    font-size:1.5rem;
+    text-transform:uppercase;
+    font-family:"Kanit";
+    font-weight: bold;
+    transition:300ms;
+}
+.link-redicionamento{
+    display: flex; /* Para alinhar a imagem e o texto horizontalmente */
+    align-items: center; /* Para alinhar verticalmente ao centro */
+    justify-content:center;
+}
+.sub-div-links-cadastro{
+    height:5rem;
+    width:13.5rem;
+}
+.img01-link-redicionamento{
+    position:relative;
+    top:4.2rem;
+    left:0.7rem;
+    height:50px;
+    width:50px;
+}
+.img02-link-redicionamento{
+    position:relative;
+    top:3.9rem;
+    left:0.7rem;
+    height:50px;
+    width:50px;
+}
+.link-redicionamento.ativo{
+    background:linear-gradient(
+        90deg,
+        #fccf05,
+        #e94f0e
+    );
+    color:rgb(255, 255, 255);
+}
+.link-redicionamento:focus{
+    outline: none;
+}
+#line-divisoes{
+    Background-color:rgb(197, 197, 197);
+    height:4px;
+    border:none;
+    justify-content:center;
+}
+.title-endereco-cadastro{
+    color:#015b30;
+    font-size:22px;
+    font-family:"Kanit";
+}
+
+/*RESPONSIVIDADE DIV CADASTRO*/
+
+@media (max-width:577px){
+    #div-cadastro{
+        height:25rem;
+        width:28rem;
+        gap:100px;
+    }
+    #cadastro-livros{
+        margin-left:0.5rem;
+    }
+    .box-text-input{
+        width:20rem !important;
+        height:2.5rem;
+        font-size:0.8rem !important;
+    }
+    .box-text-input-alternative{
+        width:16rem !important;
+        height:2.5rem;
+        transition:300ms;
+        font-family: "Kanit";
+        font-size:0.8rem !important;
+    }
+    .link-redicionamento{
+        height:3rem;
+        width:10rem;
+        transition:300ms;
+    }
+}
+
+/*Botões indivíduos*/
+
+#div-tipo-individuo{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    margin-top:0.5rem;
+}
+.label-selection-individuos {
+    position: relative;
+    cursor: pointer;
+    background-color:rgb(179, 179, 179);
+    border-radius:20px;
+    color:white;
+    font-size:0.8rem;
+    font-family:"Kanit";
+    text-transform: uppercase;
+}
+
+.label-selection-individuos input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.label-selection-individuos .radio-label {
+    height:2rem;
+    width:7rem;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-selection-individuos input[type="radio"]:checked + .radio-label {
+    background:linear-gradient(
+        90deg,
+        #fccf05,
+        #e94f0e
+    );
+}
+
+/*titulo da caixa de texto*/
+
+.box-text-input{
+    border-radius:2rem;
+    border:none;
+    background-color:rgb(179, 179, 179);
+    width:33.3rem;
+    height:2.5rem;
+    font-family:"Kanit";
+    transition:300ms;
+    font-size:1rem;
+}
+input:focus{
+    outline: none;
+    border: none;
+    background-color:rgb(221, 221, 221);
+}
+.box-text-input-alternative{
+    border-radius:2rem;
+    border:none;
+    background-color:rgb(179, 179, 179);
+    width:16rem;
+    height:2.5rem;
+    transition:300ms;
+    font-family: "Kanit";
+    font-size:1rem;
+}
+.box-text-input-alternative:focus{
+    outline: none;
+    border: none;
+    background-color:rgb(221, 221, 221);
+}
+
+/*Botões axuliares de cadastro - Scan e anexo*/
+
+#div-button-auxiliar-cadastro{
+    position:relative;
+    top:0.6rem;
+    display:flex;
+    padding:1rem;
+    gap:0.5rem;
+}
+.sub-div-auxiliar-cadastro{
+    height:3rem;
+    width:4.7rem; 
+    background:linear-gradient(
+        90deg,
+        #fccf05,
+        #e94f0e
+    );
+    color:white;
+    border-radius:20px;
+    border:none;
+    font-size:16px;
+    align-content:center;
+    text-align:center;
+}
+#button-auxiliar-cadastro{
+    display:none;
+}
+.img-button1-auxiliar-cadastro{
+    width:3rem;
+    height:3rem;
+}
+.img-button2-auxiliar-cadastro{
+    height:3rem;
+    width:3rem;
+}
+.img-button3-auxiliar-cadastro{
+    height:3rem;
+    width:3rem; 
+}
+#cadastro-individuos{
+    margin-left:1.3rem;
+}
+
+/*Botão submit - enviar dados*/
+.div-button-submit{
+    text-align:center;
+}
+.button-submit{
+    height:3.8rem;
+    width:15rem;
+    background: linear-gradient(
+        90deg,
+        #00c67f,
+        #3aff9a
+    );
+    color:white;
+    border-radius:30px;
+    border:none;
+    font-size:21px;
+    text-transform:uppercase;
+    font-family:"Kanit";
+}
+/*Card de confirmação de envio*/
+
+.card {
+    margin-top: 20px;
+    padding: 10px;
+    background: #dff0d8;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
