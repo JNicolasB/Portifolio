@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="icon" type="image/png" href="imgs/Logo-1.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#A">
+                    <img src="imgs/Logo-1.webp">
+                </a>
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#A">Início</a></li>
+                    <li><a href="#B">Especialidades</a></li>
+                    <li><a href="#C">Sobre mim</a></li>
+                    <li><a href="#D">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#E">
+                    <button>Contato</button>
+                </a>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="abrir-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#A">Início</a></li>
+                        <li><a href="#B">Especialidades</a></li>
+                        <li><a href="#C">Sobre</a></li>
+                        <li><a href="#D">Projetos</a></li>
+                        <li><a href="#E">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--Interface-->
+    </header>
+    
+    <main>
+        <section class="topo-site" id="A">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
+                        <p>Meu portfólio apresenta uma coleção de projetos desenvolvidos
+                           utilizando CSS, HTML e JavaScript, mostrando minha habilidade
+                           em criar sites dinâmicos e visualmente atraentes. Cada projeto
+                           reflete minha atenção aos detalhes e compromisso com a experiência
+                           do usuário, desde layouts responsivos até interações sofisticadas.</p>
+
+                        <div class="btn-contato">
+                            <a href="currículo/Currículo - João Nicolas.pdf" target="_blank" rel="noopener noreferrer">
+                                <button>Meu Currículo</button>
+                            </a>
+                        </div>
+                    </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site">
+                        <img src="imgs/EU.png">
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+            </div><!--interface--> 
+        </section><!--topo-site-->  
+
+        <section class="especialidades" id="B">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-square"></i>
+                        <h3>HTML</h3>
+                        <p>Domínio do HTML - linguagem usada para estruturar o conteúdo de páginas na web.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-braces-asterisk"></i>
+                        <h3>CSS</h3>
+                        <p>Habilidades com CSS - linguagem que define o estilo e o visual das páginas da web.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-filetype-js"></i>
+                        <h3>JavaScript </h3>
+                        <p>Conhecimentos de JS - linguagem que dá vida e interatividade às páginas da web.</p>
+                    </div>
+                    <div class="especialidades-box">
+                        <i class="bi bi-filetype-php"></i>
+                        <h3>PHP</h3>
+                        <p>Utilização de PHP - linguagem de programação usada na criação de sites dinâmicos e interativos.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-palette"></i>
+                        <h3>Desing</h3>
+                        <p>Utilização de ferramentas de Desing como Figma e photopea para planejamento de web sites.</p>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-file-earmark-word-fill"></i>
+                        <h3>Pacote Office</h3>
+                        <p>Pacote Office - conjunto de ferramentas essenciais da Microsoft para criar, editar e gerenciar documentos, planilhas e apresentações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre" id="C">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="imgs/EU - 2.jpeg">
+                    </div>
+
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU JOÃO NICOLAS.</span></h2>
+                        <p>Olá! Meu nome é João Nicolas de Brito Silva, tenho 17 anos e sou aluno
+                             do 3º ano de informática da Escola E.E.E.P José de Barcelos. Sou 
+                             desenvolvedor Front-End, mas também com noções de Hardware e manutenção de computadores.
+                             Gosto de criar interfaces modernas, responsivas e focadas na experiência 
+                             do usuário. Estou sempre buscando aprender novas tecnologias e aprimorar 
+                             minhas habilidades no desenvolvimento web.</p>
+                            <div class="btn-social">
+                                <a href="https://wa.me/5585988856332" target="_blank"><button id="whatsapp-btn"><i class="bi bi-whatsapp"></i></button></a>
+                                <a href="https://instagram.com/jooao_nicolas" target="_blank"><button id="instagram-btn"><i class="bi bi-instagram"></i></button></a>
+                                <a href="https://github.com/JNicolasB" target="_blank"><button id="instagram-btn"><i class="bi bi-github"></i></button></a>
+                                <a href="#"><button id="email-btn"><i class="bi bi-envelope"></i></button></a>
+                            </div>
+                    </div>
+                </div>              
+            </div>
+        </section>
+
+        <section class="portfolio" id="D">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    <a href="Site Astronomia/index.html" target="_blank">
+                        <div class="img-port" style="background-image: url(imgs/Astronomia.png);">
+                            <div class="overlay"><center>Site Astronomia</center></div>
+                        </div>
+                    </a>
+                    <a href="Site - Persona/index.html" target="_blank">
+                    <div class="img-port" style="background-image: url(imgs/Bella\ Online.png);">
+                        <div class="overlay">Bella Online</div>
+                    </div>
+                    </a>
+                    <a href="PROJETO SOCIAL - COMPLETO/Acervo/index.html" target="_blank">
+                        <div class="img-port" style="background-image: url(imgs/Acervo\ -\ adm.png);">
+                            <div class="overlay">Estante Viva</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario" id="E">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>E-MAIL.</span></h2>
+                    <form action="https://formsubmit.co/nicoolasbrito24@gmail.com" method="POST">
+                        <input type="text" name="nome" placeholder="Seu nome completo" required>
+                        <input type="email" name="email" placeholder="Seu e-mail" required>
+                        <input type="tel" name="celular" placeholder="Seu celular">
+                        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="btn-enviar">
+                            <input type="submit" value="ENVIAR">
+                        </div>
+                    </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <a href="#A"><img src="imgs/Logo-1.webp"></a>
+                    </div>
+                    <div class="btn-social">
+                        <button title="HARDWARE"><i class="bi bi-pc-display"></i></button>
+                        <button title="SOFTWARE"><i class="bi bi-code-slash"></i></button>
+                        <button title="WORK"><i class="bi bi-briefcase"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="line-footer borda">
+                <div class="copyright">
+                    <p>&copy; 2025 João Nicolas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

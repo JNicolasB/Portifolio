@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    user-select: none;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: blue;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: black;
+}
+.btn-contato button:hover{
+    color: rgb(235, 235, 235);
+}
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 20px;
+}
+h2.titulo span{
+    color: blue;
+}
+.img-sobre img{
+    height: 500px;
+    width: 380px;
+    border-radius: 20px;
+}
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 5px rgba(32, 32, 219, 0.938);
+    transform: scale(1.05);
+    color: rgb(235, 235, 235);
+}
+
+/* ===================================================CABEÇALHO==================================================== */
+
+.logo img{
+    width: 90px;
+    height: 90px;
+}
+header{
+    padding: 40px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1000;
+    background-color: black;
+    transition: all 0.4s ease;
+}
+header.header-scroll {
+    padding: 15px 5%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.8); /* fundo mais compacto/transparente */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* leve sombra */
+    backdrop-filter: blur(6px); /* opcional: dá um efeito de vidro fosco */
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: rgb(112, 112, 112);
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header nav.menu-desktop a:hover{
+    color: white;
+    transform: scale(1.07);
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px ;
+}
+
+/* ===================================================MENU-MOBILE================================================== */
+
+.btn-abrir-menu i{
+    color: blue;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+.menu-mobile .btn-fechar i{
+    color: blue;
+    font-size: 30px;
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 4%;
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px 8%;
+    display: block;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: blue;
+    color: black;
+}
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.384);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+
+/* ===================================================TOPO-MAIN==================================================== */
+
+section.topo-site{
+    padding: 40px 7%;
+    padding-top: 195px;
+    margin-top: 10px;
+}
+section.topo-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-site h1{
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+}
+.topo-site .txt-topo-site h1 span{
+    color: blue;
+}
+.topo-site .txt-topo-site p{
+    color: rgb(241, 241, 241);
+    margin: 40px 0;
+    font-size: 17px;
+}
+.topo-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: -15px;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ===================================================ESPECIALIDADES================================================ */
+
+section.especialidades{
+    padding: 40px 10%;
+}
+section.especialidades .flex{
+    gap: 60px;
+}
+.especialidades .especialidades-box{
+    color: white;
+    padding: 40px 40px 70px 40px;
+    margin-top: 55px;
+    border-radius: 20px;
+    transition: .2s;
+}
+.especialidades .especialidades-box:nth-child(n + 4) {
+    margin-top: 10px; /* ou o valor que preferir */
+}
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.466);
+}
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: blue;
+}
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+section.especialidades .flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    flex-wrap: wrap; /* caso ainda esteja como flex */
+}
+
+.especialidades .especialidades-box {
+    background-color: #121212; /* opcional: destaca visualmente */
+    height: 320px; /* você pode ajustar conforme preferir */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/* ===================================================SOBRE==================================================== */
+
+section.sobre{
+    padding: 80px 7%;
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+    color: white;
+    font-size: 18px;
+}
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txt-sobre h2 span{
+    color: rgb(37, 37, 250);
+    display: block;
+}
+.sobre .txt-sobre p{
+    max-width: 800px;
+    margin: 20px 0;
+    text-align: justify;
+}
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(37, 37, 250);
+    color: white;
+    font-size: 22px;
+    margin: 0 5px;
+    transition: .2s;
+}
+#whatsapp-btn{
+    cursor: pointer;
+}
+#instagram-btn{
+    cursor: pointer;
+}
+#email-btn{
+    cursor: pointer;
+}
+
+/* ==================================================PORTFÓLIO==================================================== */
+
+section.portfolio{
+    padding: 50px 5%;
+}
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.img-port{
+    width: 360px;
+    height: 440px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 3.5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+.img-port:hover{
+    background-position: 100% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ==================================================FORMULÁRIO==================================================== */
+
+section.formulario{
+    padding: 80px 5%;
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+form textarea{
+    resize: none;
+    height: 150px;
+}
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+form .btn-enviar input{
+    width: 130px;
+    height: 60px;
+    background-color: blue;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ==================================================RODAPÉ==================================================== */
+
+footer{
+    padding: 10px 5% 10px 5%;
+    box-shadow: 0 0 20px 15px rgba(255, 255, 255, 0.103);
+}
+footer .flex{
+    justify-content: space-between;
+}
+footer .line-footer{
+    padding: 30px 0;
+}
+footer .line-footer .btn-social{
+    margin-top: 30px;
+}
+.borda{
+    border-top: 3px solid blue;
+}
+footer .line-footer p i{
+    color: blue;
+    font-size: 25px;
+}
+footer .line-footer p a{
+    color: white;
+    text-decoration: none;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+footer .line-footer p{
+    display: flex;
+}
+.logo-footer img{
+    width: 100px;
+    height: 100px;
+}
+footer .copyright {
+    text-align: center;
+    color: rgb(180, 180, 180);
+    font-size: 16px;
+    max-width: 170px;
+    transition: 0.5s;
+}
+.copyright:hover{
+    color: rgb(125, 125, 125);
+}
+
+
+
+@media screen and (max-width: 1020px){
+    .flex{
+        flex-direction: column;
+    }
+    .topo-site .flex{
+        flex-direction: column-reverse;
+    }
+    h2.titulo{
+        font-size: 32px;
+    }
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-site .flex{
+        gap: 60px;
+    }
+    section.topo-site{
+        padding: 20px 10%;
+        padding-top: 195px;
+    }
+    .topo-site h1{
+        font-size: 30px;
+    }
+    .topo-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /* ESPECIALIDADES */
+    section.especialidades{
+        padding: 40px 12%;
+    }
+    section.especialidades .flex{
+        gap: 0px;
+        grid-template-columns: 1fr;
+    }
+
+    /* SOBRE */
+    section.sobre{
+    padding: 80px 8%;
+    margin-bottom: 20px;
+    }
+    .sobre .txt-sobre h2{
+    font-size: 29px;
+    line-height: 35px;
+    text-align: center;
+    }
+    .btn-social{
+    text-align: center;
+    }
+
+    /* PORTFÓLIO */
+    section.portfolio{
+    padding: 80px 8%;
+    margin-bottom: 20px;
+    }
+    .img-port{
+        width: 100%;
+        max-width: 360%;
+        margin: 0 auto;
+        height: 450px;
+    }
+    section.portfolio .flex{
+        gap: 60px;
+    }
+
+    /* RODAPÉ */
+    footer .line-footer{
+        text-align: center;
+    }
+    footer .line-footer p{
+        justify-content: center;
+        align-items: center;
+    }
+    #abrir-menu{
+        display: block;
+    }
+}
+.btn-abrir-menu{
+    display: none;
+}
+
+/* ==================================================SCROLL==================================================== */
+
+/* Barra de rolagem completa */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra lateral */
+}
+
+/* Parte de fundo da barra */
+::-webkit-scrollbar-track {
+  background: #111; /* Cor de fundo do trilho */
+}
+
+/* Parte que se move (thumb) */
+::-webkit-scrollbar-thumb {
+  background: blue; /* Cor da barra de rolagem */
+  border-radius: 10px;
+}
+
+/* Quando o mouse passa por cima */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 180); /* Cor ao passar o mouse */
+}

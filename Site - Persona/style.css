@@ -1,0 +1,478 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit",sans-serif;
+}
+body{
+    background-color: rgb(255, 192, 236);
+}
+main{
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(255, 192, 236);
+}
+main a{
+    text-decoration: none;
+    color: black;
+}
+
+/* ===================================================CABEÇALHO====================================================== */
+
+.cabecalho{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cabecalho i{
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+.tl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.links{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 123, 237);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+    padding: 0 50px 0 50px;
+    font-size: 19px;
+}
+.links ul{
+    list-style-type: none;
+    display: flex;
+} 
+.links ul li{
+    transition: 0.5s;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links ul li:hover{
+    transform: scale(1.1);
+    background-color:rgb(253, 6, 220);
+    height: 50px;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.titulo img{
+    padding-right: 20px;
+    width: 70px;
+    height: 50px;
+    user-select: none;
+}
+#user{
+    font-size: 35px;
+    margin-top: 5px;
+    user-select: none;
+} 
+#cart{
+    margin-right: 2px;
+    margin-left: 40px;
+    user-select: none;
+} 
+.titulo span{
+    background-color: rgb(214, 214, 214);
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 25px;
+    margin-right: 1395px;
+}
+#lupa{ 
+    font-size: 27px;
+    padding: 2px;
+    user-select: none;
+} 
+.input-buscar{
+    margin-left: 1300px;
+    position: absolute;
+    background: rgb(214, 214, 214);
+    height: 60px;
+    padding: 15px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+}
+.input-buscar:hover > .search-txt{
+    width: 250px;
+    padding-left: 10px;
+}
+
+/* =====================================================MAIN========================================================== */
+
+.promo{
+    background-color: rgb(251, 251, 251);
+    border-top: solid 5px rgb(255, 88, 177);
+    border-bottom: solid 0px rgb(255, 88, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 80px;
+    user-select: none;
+}
+.promo p{
+    color: rgb(255, 88, 177);
+    font-size: 25px;
+    font-weight: 700;
+}
+.collection{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+.collection .content{
+    height: 27rem;
+    width: 22rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 3rem;
+    border-bottom: .5rem solid rgb(255, 101, 217);
+    border-top: .5rem solid rgb(255, 101, 217);
+    margin-top: 30px;
+    user-select: none;
+}
+.content img{
+    width: 100%;
+}
+#esmalte{
+    width: 85%;
+    margin-left: 18px; 
+}
+#rimel{
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#escova{
+    width: 95%;
+}
+#gloss{
+    width: 97%;
+}
+#creme{
+    width: 85%;
+    margin-left: 15px;
+    margin-top: 18px;
+}
+#batom{
+    width: 90%;
+    margin-left: 12px;
+    margin-top: 18px;
+}
+.text-content{
+    margin-top: 20px;
+}
+.text-content h3{
+    margin-top: 5px;
+    color: rgb(15, 15, 15);
+}
+.preco{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* COMENTÁRIOS */
+
+.form{
+    width: 700px;
+    height: 450px;
+    padding: 20px;
+    background-color: rgb(249, 249, 249);
+    border-top: 0.9rem solid rgb(255, 101, 217);
+    border-right: 1rem solid rgb(233, 81, 195);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    margin-top: 50px;
+    margin-left: 560px;
+}
+.nome{
+    padding: 15px;
+    font-size: 21px;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 400px;
+    outline: 0;
+}
+.nota{
+    padding: 15px;
+    font-size: 21px;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    margin-bottom: 20px;
+    width: 150px;
+    outline: 0;
+}
+.form textarea{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 21px;
+    resize: none;
+    outline: 0;
+}
+.btn-enviar{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 240px;
+    transition: .3s;
+    cursor: pointer;
+}
+.btn-enviar:hover{
+    background-color: rgb(216, 216, 216);
+    transform: scale(1.03);
+}
+.form h1{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    color: rgb(255, 88, 177);
+}
+
+/* ABA CARRINHO */
+
+.sidebar{
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    /* right: 0; */
+    right: -450px;
+    background-color: white;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1;
+    padding: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    user-select: none;
+}
+.sidebar.open{
+    right: 0;
+}
+.sidebar-close{
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    cursor: pointer;
+}
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.individual-cart-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 5px;
+    color: rgb(151, 151, 151);
+    border: 1px solid rgb(230, 230, 230);
+    font-size: 18px;
+}
+.cart-item-price{
+    color: rgb(151, 151, 151);
+}
+.sidebar--footer{
+    position: absolute;
+    bottom: 10px;
+    width: 85%;
+}
+.total-amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+.cart-total{
+    font-size: 18px;
+    color: rgb(65, 65, 65);
+    font-weight: 700;
+}
+.checkout-btn{
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(255, 192, 236);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: transform .7s ease;
+}
+.checkout-btn:hover{
+    background-color: rgb(255, 171, 230);
+    transform: scale(1.01);
+}
+
+/* ====================================================RODAPÉ========================================================= */
+
+.rodape{
+    background-color: rgb(255, 123, 237);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.849);
+    user-select: none;
+    margin-top: 500px;
+    border-top: 8px solid rgba(240, 90, 220, 0.295);
+}
+.rodape .lg{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-right: 1300px;
+}
+.contato{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 0px;
+}
+.contato .fale-conosco{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.contato i{
+    padding: 10px;
+    background-color: rgb(240, 90, 220);
+    border-radius: 50px;
+    padding: 10px 11px 10px 11px;
+    margin-bottom: 2px;
+}
+.contato .app{
+    display: flex;
+    align-items: center;
+}
+.app p{
+    font-size: 19px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+}
+.pagamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 1230px;
+}
+.pagamento p{
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#pix{
+    width: 90px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+#mastercard{
+    width: 90px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#visa{
+    width: 90px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+#elo{
+    width: 90px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+.barra{
+    background-color: rgb(240, 90, 220);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.521);
+    transition: .5s;
+    user-select: none;
+}
+.barra:hover{
+    color: rgba(255, 255, 255, 0.842);
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: rgb(255, 182, 194);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(255, 255, 255);
+    border-radius: 10px 10px 10px 10px;
+}
